@@ -2,6 +2,8 @@
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
 
+---
+
 This repository provides an `ansible` playbook to install the dependencies
 required to compile `gccemacs` (native-compiled `emacs`) on OS X.
 

@@ -21,7 +21,6 @@ else
     cd $REPO && git pull
 fi
 
-# TODO: Make gcc location user-configurable
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
 export CFLAGS="-I/usr/local/Cellar/gcc/10.2.0/include -O3 -march=native"
 export LDFLAGS="-L/usr/local/Cellar/gcc/10.2.0/lib/gcc/10 -I/usr/local/Cellar/gcc/10.2.0/include"
