@@ -2,8 +2,6 @@
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
 
----
-
 This repository provides an `ansible` playbook to install the dependencies
 required to compile `gccemacs` (native-compiled `emacs`) on OS X.
 
@@ -34,3 +32,14 @@ Running `build.sh` creates `/Applications/Emacs-${TODAY}.app`, where `TODAY` is
 an ISO-style date. You may use this application bundle or rename it to
 `Emacs.app`. Running `build.sh` more than once per calendar day overwrites the
 existing build.
+
+## Check if native compilation works inside Emacs
+
+From https://www.masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
+
+```elisp
+(if (and (fboundp 'native-comp-available-p)
+       (native-comp-available-p))
+  (message "Native compilation is available")
+(message "Native complation is *not* available"))
+```
