@@ -1,4 +1,4 @@
-# Building emacs native on OS X
+# Building emacs native on macOS 10.13
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
 
@@ -8,6 +8,10 @@ This repository provides an `ansible` playbook to install the dependencies
 required to compile `gccemacs` (native-compiled `emacs`) on OS X.
 
 You must have `homebrew` and `ansible` installed to run these scripts.
+
+```bash
+python3 -m pip install ansible
+```
 
 To install the system dependencies, run
 
