@@ -55,12 +55,15 @@ make -j${N_CORES} NATIVE_FULL_AOT=1 BYTE_COMPILE_EXTRA_FLAGS='--eval "(setq comp
 
 make install-eln
 make install
+echo "make install finished"
 
 # Move Emacs.app to /Applications
 if [ -d "${REPO}/nextstep/Emacs.app" ]; then
     cp -a "${REPO}/nextstep/Emacs.app" "/Applications/Emacs-${BUILD}.app"
 
     cd /Applications/Emacs-${BUILD}.app/Contents || exit
+
+    # it is possible that this fails in which case those directories need to be deleted
     ln -s /usr/local/opt/gccemacs-${BUILD}/lib/emacs/28.0.50/native-lisp .
     ln -s /usr/local/opt/gccemacs-${BUILD}/share/emacs/28.0.50/lisp .
 fi
