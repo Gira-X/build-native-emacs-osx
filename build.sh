@@ -18,7 +18,7 @@ fi
 if [ ! -d "$REPO" ]; then
     git clone --depth 1 https://github.com/emacs-mirror/emacs.git "$REPO" -b feature/native-comp
 else
-    cd $REPO && git pull
+    cd $REPO
 fi
 
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
