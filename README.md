@@ -1,3 +1,5 @@
+Note that it throws an `emacs: dlopen(/usr/local/bin/../native-lisp/28.0.50-e3916d16/window-0d1b8b93-513ac8ca.eln, 1): image not found` error now for some reason although it worked previously :(
+
 # Build Emacs native on macOS 10.13
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
