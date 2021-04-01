@@ -2,6 +2,8 @@
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
 
+`no-titlebar.patch` needs to be applied manually after cloning the repository.
+
 ---
 
 This repository provides an `ansible playbook` to install the dependencies
