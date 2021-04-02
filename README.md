@@ -1,12 +1,14 @@
-Note that it throws an `emacs: dlopen(/usr/local/bin/../native-lisp/28.0.50-e3916d16/window-0d1b8b93-513ac8ca.eln, 1): image not found` error now for some reason although it worked previously :(
+**Note that it throws an `emacs: dlopen(/usr/local/bin/../native-lisp/28.0.50-e3916d16/window-0d1b8b93-513ac8ca.eln, 1): image not found` error now for some reason although it worked previously :(**
 
-# Build Emacs native on macOS 10.13
+---
 
 `brew install --build-from-source libgccjit` is required which took 4 hours for me.
 
 `no-titlebar.patch` needs to be applied manually after cloning the repository.
 
 ---
+
+### Building Emacs native for macOS 10.13 (and possibly later)
 
 This repository provides an `ansible playbook` to install the dependencies
 required to compile `gccemacs` (native-compiled `emacs`) on macOS.
